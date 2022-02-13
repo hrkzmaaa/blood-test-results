@@ -77,7 +77,7 @@ export class MinimumBloodPressure implements Ingredient {
 
     calc() {
         if (this.value > 80) {
-            return 'Lower'
+            return 'Upper'
         } else {
             return 'Standard'
         }
