@@ -1,9 +1,20 @@
 <script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
-</script>
+import InputElement from "@/components/InputElement.vue";
+import { reactive } from "vue";
 
+const state = reactive({
+  value: "",
+  label: "カロリー"
+});
+
+const updateValue = (newValue: string) => {
+  state.value = newValue
+}
+</script>
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <InputElement :value="state.value" :label="state.label" @update:value="updateValue" />
 </template>
+
+
+<style>
+</style>
